@@ -1,0 +1,6 @@
+name = Host meta
+description = Locate host metadata and individual resources controlled by the host.
+core = 7.x
+
+dependencies[] = well_known
+dependencies[] = xrd

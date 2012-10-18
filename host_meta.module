@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @see http://tools.ietf.org/html/rfc6415
+ * @todo
+ * Implement JRD
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function host_meta_menu() {
+  $items = array();
+  $items['.well-known/host-meta'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => 'host_meta_page',
+    'access callback' => TRUE,
+    'file' => 'host_meta.pages.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_xrd_TYPE_alter().
+ */
+function host_meta_xrd_host_meta_alter($xrd) {
+}
